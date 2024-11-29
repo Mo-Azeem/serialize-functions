@@ -1,15 +1,9 @@
-# serialize-functions
+# Serialize Functions
 
-To install dependencies:
+Just a basic proof of concept that functions can be serialized and sent inside JSON responses. A technique that is already used by some of the UI frameworks to pass props from server components to client components.
 
-```bash
-bun install
-```
+When props are passed from server to client components, behind the scenes the framework serialize the props into JSON and send them to the client for later hydration, including `Date` and `Function` objects.
 
-To run:
+By default, `Function` cannot be parsed into JSON except using an external library.
 
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.34. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+**By no mean this library is production ready, just use `superjson`.**
